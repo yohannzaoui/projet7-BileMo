@@ -2,12 +2,14 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
+ * @ApiResource()
+ * @ORM\Entity(repositoryClass="App\Repository\PhoneRepository")
  */
-class Product
+class Phone
 {
     /**
      * @ORM\Id()
@@ -19,12 +21,7 @@ class Product
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
-
-    /**
-     * @ORM\Column(type="text")
-     */
-    private $description;
+    private $brand;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -37,15 +34,6 @@ class Product
     private $createdAt;
 
     /**
-     * Product constructor.
-     * @throws \Exception
-     */
-    public function __construct()
-    {
-        $this->createdAt = new \DateTime();
-    }
-
-    /**
      * @return int|null
      */
     public function getId(): ?int
@@ -56,37 +44,18 @@ class Product
     /**
      * @return string|null
      */
-    public function getName(): ?string
+    public function getBrand(): ?string
     {
-        return $this->name;
+        return $this->brand;
     }
 
     /**
-     * @param string $name
-     * @return Product
+     * @param string $brand
+     * @return Phone
      */
-    public function setName(string $name): self
+    public function setBrand(string $brand): self
     {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param string $description
-     * @return Product
-     */
-    public function setDescription(string $description): self
-    {
-        $this->description = $description;
+        $this->brand = $brand;
 
         return $this;
     }
@@ -101,7 +70,7 @@ class Product
 
     /**
      * @param string $reference
-     * @return Product
+     * @return Phone
      */
     public function setReference(string $reference): self
     {
@@ -120,7 +89,7 @@ class Product
 
     /**
      * @param \DateTimeInterface $createdAt
-     * @return Product
+     * @return Phone
      */
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
