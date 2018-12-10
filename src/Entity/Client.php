@@ -41,11 +41,6 @@ class Client
     private $roles = [];
 
     /**
-     * @ORM\Column(type="datetime")
-     */
-    private $updatedAt;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $username;
@@ -61,11 +56,18 @@ class Client
     private $Users;
 
     /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $updatedAt;
+
+    /**
      * Client constructor.
+     * @throws \Exception
      */
     public function __construct()
     {
         $this->Users = new ArrayCollection();
+        $this->createdAt = new \DateTime();
     }
 
     /**
@@ -153,25 +155,6 @@ class Client
     }
 
     /**
-     * @return \DateTimeInterface|null
-     */
-    public function getUpdatedAt(): ?\DateTimeInterface
-    {
-        return $this->updatedAt;
-    }
-
-    /**
-     * @param \DateTimeInterface $updatedAt
-     * @return Client
-     */
-    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
-    {
-        $this->updatedAt = $updatedAt;
-
-        return $this;
-    }
-
-    /**
      * @return string|null
      */
     public function getUsername(): ?string
@@ -244,6 +227,18 @@ class Client
                 $user->setClient(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }
