@@ -11,6 +11,7 @@ namespace App\Controller;
 
 use App\Entity\Product;
 use App\Repository\ProductRepository;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -55,12 +56,10 @@ class addProductController
      */
     public function addProduct(Request $request)
     {
-        $data = $request->getContent();
+        $product = $this->serializer->deserialize($request->getContent(), Product::class, 'json');
 
-        $test = $this->serializer->deserialize($data, Product::class, 'json');
+        $this->productRepository->save($product);
 
-        $this->productRepository->save($test);
-
-        return new Response('ok', 201);
+        return new JsonResponse(null, JsonResponse::HTTP_NO_CONTENT);
     }
 }

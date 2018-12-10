@@ -3,18 +3,22 @@
  * Created by PhpStorm.
  * User: Yohann Zaoui
  * Date: 10/12/2018
- * Time: 16:49
+ * Time: 09:39
  */
 
 namespace App\Controller;
 
+
 use App\Repository\ProductRepository;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 
-class getProductController
+/**
+ * Class getProductsController
+ * @package App\Controller
+ */
+class getProductsController
 {
     /**
      * @var ProductRepository
@@ -40,16 +44,15 @@ class getProductController
     }
 
     /**
-     * @Route(path="/product/{id}", name="product", methods={"GET"})
-     * @param Request $request
+     * @Route(path="/products", name="products", methods={"GET"})
      * @return JsonResponse
      */
-    public function getProduct(Request $request)
+    public function getProducts()
     {
-        $product = $this->productRepository->find($request->attributes->get('id'));
+        $products = $this->productRepository->findAll();
 
-        $serializeData = $this->serializer->serialize($product, 'json');
+        $serializeData = $this->serializer->serialize($products, 'json');
 
-        return new JsonResponse($serializeData, 200);
+        return new JsonResponse($serializeData, '200');
     }
 }
