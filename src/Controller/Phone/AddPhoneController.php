@@ -73,6 +73,6 @@ class AddPhoneController
 
         $this->phoneRepository->save($phone);
 
-        return new JsonResponse(null, JsonResponse::HTTP_NO_CONTENT);
+        return new JsonResponse("Product added", JsonResponse::HTTP_ACCEPTED);
     }
 }
