@@ -8,13 +8,14 @@
 
 namespace App\Controller\Phone;
 
-
-use App\Entity\Phone;
 use App\Repository\PhoneRepository;
+use App\Services\Interfaces\SerializerServiceInterface;
+use App\Services\ValidatorService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
  * Class AddPhoneController
@@ -28,25 +29,33 @@ class AddPhoneController
     private $phoneRepository;
 
     /**
-     * @var SerializerInterface
+     * @var SerializerServiceInterface
      */
     private $serializer;
 
     /**
+     * @var ValidatorInterface
+     */
+    private $validator;
+
+    /**
      * AddPhoneController constructor.
      * @param PhoneRepository $phoneRepository
-     * @param SerializerInterface $serializer
+     * @param SerializerServiceInterface $serializer
+     * @param ValidatorInterface $validator
      */
     public function __construct(
         PhoneRepository $phoneRepository,
-        SerializerInterface $serializer
+        SerializerServiceInterface $serializer,
+        ValidatorInterface $validator
     ) {
       $this->serializer = $serializer;
       $this->phoneRepository = $phoneRepository;
+      $this->validator = $validator;
     }
 
     /**
-     * @Route(path="/add/phone", name="addPhone", methods={"POST"})
+     * @Route(path="/phones", name="addPhone", methods={"POST"})
      * @param Request $request
      * @return JsonResponse
      * @throws \Doctrine\ORM\ORMException
@@ -54,7 +63,13 @@ class AddPhoneController
      */
     public function AddPhone(Request $request)
     {
-        $phone = $this->serializer->deserialize($request->getContent(), Phone::class, 'json');
+        $phone = $this->serializer->deserializePhone($request->getContent());
+
+        $errors = $this->validator->validate($phone);
+
+        if (count($errors)) {
+            return new JsonResponse((string)$errors, Response::HTTP_BAD_REQUEST);
+        }
 
         $this->phoneRepository->save($phone);
 

@@ -40,4 +40,13 @@ class PhoneRepository extends ServiceEntityRepository
         $this->_em->remove($id);
         $this->_em->flush();
     }
+
+    /**
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function update()
+    {
+        $this->_em->flush();
+    }
 }

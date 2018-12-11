@@ -46,7 +46,7 @@ class DeletePhoneController
     }
 
     /**
-     * @Route(path="/delete/phone/{id}", methods={"DELETE"})
+     * @Route(path="/phones/{id}", name="deletePhone", methods={"DELETE"})
      * @param Request $request
      * @return JsonResponse
      * @throws \Doctrine\ORM\ORMException

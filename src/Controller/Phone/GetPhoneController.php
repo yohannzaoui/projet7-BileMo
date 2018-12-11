@@ -45,7 +45,7 @@ class GetPhoneController
     }
 
     /**
-     * @Route(path="/Phone/{id}", name="phone", methods={"GET"})
+     * @Route(path="/phones/{id}", name="phone", methods={"GET"})
      * @param Request $request
      * @return JsonResponse
      */
