@@ -1,1 +1,4 @@
-# projet7
+# projet7 API BileMo
+# Developped with :
+- Symfony Framework 4.2
+- API PLatForm
