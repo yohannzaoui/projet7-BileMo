@@ -56,9 +56,13 @@ class DeletePhoneController
     {
         $phone = $this->phoneRepository->find($request->attributes->get('id'));
 
+        if (!$phone) {
+            return new JsonResponse("Product not found", JsonResponse::HTTP_BAD_REQUEST);
+        }
+
         $this->phoneRepository->delete($phone);
 
-        return new JsonResponse(null, JsonResponse::HTTP_NO_CONTENT);
+        return new JsonResponse("Product removed", JsonResponse::HTTP_ACCEPTED);
     }
 
 }
