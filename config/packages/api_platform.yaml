@@ -11,3 +11,8 @@ api_platform:
         etag: true
 
     enable_swagger_ui: true
+
+    api_platform:
+        collection:
+            pagination:
+                items_per_page: 10
