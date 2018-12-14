@@ -5,6 +5,9 @@ namespace App\Repository;
 use App\Entity\Phone;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\ORM\QueryBuilder;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
+use PagerFanta\Pagerfanta;
 
 /**
  * @method Phone|null find($id, $lockMode = null, $lockVersion = null)
@@ -17,36 +20,5 @@ class PhoneRepository extends ServiceEntityRepository
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Phone::class);
-    }
-
-    /**
-     * @param Phone $phone
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
-     */
-    public function save(Phone $phone)
-    {
-        $this->_em->persist($phone);
-        $this->_em->flush();
-    }
-
-    /**
-     * @param Phone $id
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
-     */
-    public function delete(Phone $id)
-    {
-        $this->_em->remove($id);
-        $this->_em->flush();
-    }
-
-    /**
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
-     */
-    public function update()
-    {
-        $this->_em->flush();
     }
 }

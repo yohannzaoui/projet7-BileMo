@@ -7,12 +7,14 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(attributes={"order"={"createdAt":"DESC"}})
  * @ORM\Entity(repositoryClass="App\Repository\PhoneRepository")
  */
 class Phone
 {
     /**
+     * @var int The id of this phone
+     *
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -20,34 +22,51 @@ class Phone
     private $id;
 
     /**
+     *
+     * @var string Brand of this phone
+     *
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
      */
     private $brand;
 
     /**
+     * @var string The reference of this phone
+     *
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
      */
     private $reference;
 
     /**
+     * @var string The color of this phone
+     *
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Type("alpha")
      */
     private $color;
 
     /**
+     * @var string The price of this phone
+     *
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Type("numeric")
      */
     private $price;
 
     /**
+     * @var \DateTime The creation date of this phone
+     *
      * @ORM\Column(type="datetime")
+     * @Assert\DateTime()
      */
     private $createdAt;
 
     /**
+     * @var \DateTime The update of this phone
+     *
      * @ORM\Column(type="datetime", nullable=true)
+     * @Assert\DateTime()
      */
     private $updatedAt;
 

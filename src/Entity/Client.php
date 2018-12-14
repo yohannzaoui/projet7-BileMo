@@ -3,16 +3,17 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource()
+ * @ApiResource(attributes={"order"={"username":"ASC"}})
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
  */
-class Client
+class Client implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -24,11 +25,13 @@ class Client
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
+     * @Assert\Email(message="Email address not valid")
      */
     private $email;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\DateTime()
      */
     private $createdAt;
 
@@ -50,7 +53,8 @@ class Client
     private $username;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Type("numeric")
      */
     private $phoneNumber;
 
@@ -58,11 +62,6 @@ class Client
      * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client")
      */
     private $Users;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $updatedAt;
 
     /**
      * Client constructor.
@@ -235,15 +234,19 @@ class Client
         return $this;
     }
 
-    public function getUpdatedAt(): ?\DateTimeInterface
+    /**
+     * @return string|void|null
+     */
+    public function getSalt()
     {
-        return $this->updatedAt;
+
     }
 
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
+    /**
+     *
+     */
+    public function eraseCredentials()
     {
-        $this->updatedAt = $updatedAt;
 
-        return $this;
     }
 }
