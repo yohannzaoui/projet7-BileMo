@@ -5,6 +5,8 @@ namespace App\Repository;
 use App\Entity\Client;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
+use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @method Client|null find($id, $lockMode = null, $lockVersion = null)
@@ -12,39 +14,27 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  * @method Client[]    findAll()
  * @method Client[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ClientRepository extends ServiceEntityRepository
+class ClientRepository extends ServiceEntityRepository implements UserLoaderInterface
 {
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Client::class);
     }
 
-    // /**
-    //  * @return Client[] Returns an array of Client objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function loadUserByUsername($username)
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
+        // TODO: Implement loadUserByUsername() method.
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Client
+
+    /**
+     * @param Client $client
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function save(Client $client)
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $this->_em->persist($client);
+        $this->_em->flush();
     }
-    */
 }

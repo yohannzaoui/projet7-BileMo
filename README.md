@@ -4,4 +4,4 @@
 Developped with :
 - Symfony Framework 4.2
 - API PlatForm
-- JWT
+- Lexik JWT
