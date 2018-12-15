@@ -13,16 +13,16 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Class HomeController
+ * Class ApiController
  * @package App\Controller
  */
-class HomeController
+class ApiController
 {
     /**
      * @Route(path="/", name="home_api", methods={"GET"})
      * @return RedirectResponse
      */
-    public function HomeApi()
+    public function api()
     {
         return new RedirectResponse("/api", RedirectResponse::HTTP_FOUND);
     }

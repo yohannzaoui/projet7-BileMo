@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiSubresource;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -38,6 +39,7 @@ class Client implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
+     *
      */
     private $password;
 
@@ -60,6 +62,7 @@ class Client implements UserInterface
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client")
+     * @ApiSubresource()
      */
     private $Users;
 

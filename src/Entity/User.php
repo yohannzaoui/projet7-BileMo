@@ -7,7 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource(attributes={"order"={"username":"ASC"}})
+ * @ApiResource(attributes={"order"={"name":"ASC"}})
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User

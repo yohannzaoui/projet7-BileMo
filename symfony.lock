@@ -119,9 +119,6 @@
     "ocramius/proxy-manager": {
         "version": "2.2.2"
     },
-    "pagerfanta/pagerfanta": {
-        "version": "v2.0.1"
-    },
     "phar-io/manifest": {
         "version": "1.0.3"
     },
@@ -442,9 +439,6 @@
     },
     "webonyx/graphql-php": {
         "version": "v0.13.0"
-    },
-    "white-october/pagerfanta-bundle": {
-        "version": "v1.2.2"
     },
     "willdurand/negotiation": {
         "version": "v2.3.1"

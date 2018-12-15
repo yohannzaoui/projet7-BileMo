@@ -7,7 +7,10 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource(attributes={"order"={"createdAt":"DESC"}})
+ * @ApiResource(attributes={"order"={"createdAt":"DESC"}},
+ *     collectionOperations={"get"={"method"="GET"}},
+ *     itemOperations={"get"={"method"="GET"}})
+ *
  * @ORM\Entity(repositoryClass="App\Repository\PhoneRepository")
  */
 class Phone
