@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use ApiPlatform\Core\Annotation\ApiSubresource;
+use Ramsey\Uuid\Uuid;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -17,9 +18,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Client implements UserInterface
 {
     /**
+     * @var string The id of this phone
+     *
      * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="guid")
+     * @Assert\NotBlank()
+     * @Assert\Uuid()
      */
     private $id;
 
@@ -72,14 +76,15 @@ class Client implements UserInterface
      */
     public function __construct()
     {
+        $this->id = Uuid::uuid4();
         $this->Users = new ArrayCollection();
         $this->createdAt = new \DateTime();
     }
 
     /**
-     * @return int|null
+     * @return string
      */
-    public function getId(): ?int
+    public function getId(): string
     {
         return $this->id;
     }

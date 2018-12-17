@@ -963,9 +963,9 @@
     </table>
     <column id="244" parent="240" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <Comment>(DC2Type:guid)</Comment>
+      <DataType>char(36)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="245" parent="240" name="email">
@@ -1002,119 +1002,114 @@
     <column id="250" parent="240" name="phone_number">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="240" name="updated_at">
-      <Position>8</Position>
-      <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="252" parent="240" name="PRIMARY">
+    <key id="251" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="253" parent="241" name="version">
+    <column id="252" parent="241" name="version">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="254" parent="241" name="PRIMARY">
+    <key id="253" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="255" parent="242" name="id">
+    <column id="254" parent="242" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <Comment>(DC2Type:guid)</Comment>
+      <DataType>char(36)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="242" name="brand">
+    <column id="255" parent="242" name="brand">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="242" name="reference">
+    <column id="256" parent="242" name="reference">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="242" name="created_at">
+    <column id="257" parent="242" name="created_at">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="242" name="updated_at">
+    <column id="258" parent="242" name="updated_at">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="260" parent="242" name="PRIMARY">
+    <column id="259" parent="242" name="color">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="242" name="price">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="261" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="261" parent="243" name="id">
+    <column id="262" parent="243" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <Comment>(DC2Type:guid)</Comment>
+      <DataType>char(36)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="243" name="name">
+    <column id="263" parent="243" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="243" name="email">
+    <column id="264" parent="243" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="243" name="updated_at">
+    <column id="265" parent="243" name="updated_at">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="243" name="phone_number">
+    <column id="266" parent="243" name="phone_number">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="243" name="client_id">
+    <column id="267" parent="243" name="client_id">
       <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
+      <Comment>(DC2Type:guid)</Comment>
+      <DataType>char(36)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="243" name="created_at">
+    <column id="268" parent="243" name="created_at">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="268" parent="243" name="IDX_8D93D64919EB6921">
-      <ColNames>client_id</ColNames>
-      <Type>btree</Type>
-    </index>
     <key id="269" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="270" parent="243" name="FK_8D93D64919EB6921">
-      <ColNames>client_id</ColNames>
-      <RefSchemaName>bilemo</RefSchemaName>
-      <RefTableName>client</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
   </database-model>
 </dataSource>

@@ -20,7 +20,7 @@ use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
  * Class CreateClientCommand
  * @package App\Command
  */
-class CreateClientCommand extends Command
+class CreateAdminCommand extends Command
 {
 
     /**
@@ -86,12 +86,12 @@ class CreateClientCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('app:create-client')
-            ->setDescription('Create client account')
+            ->setName('app:create-admin')
+            ->setDescription('Create admin account')
             ->setHelp("Cette commande vous assiste pour la création d'un compte client")
-            ->addArgument('username', InputArgument::REQUIRED, 'Username of the client')
-            ->addArgument('password', InputArgument::REQUIRED, 'password client')
-            ->addArgument('email', InputArgument::REQUIRED, 'Email client')
+            ->addArgument('username', InputArgument::REQUIRED, 'Username of the admin')
+            ->addArgument('password', InputArgument::REQUIRED, 'password admin')
+            ->addArgument('email', InputArgument::REQUIRED, 'Email admin')
         ;
     }
 
@@ -104,11 +104,11 @@ class CreateClientCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln('You are about to create an client.');
+        $output->writeln('You are about to create an admin.');
         $output->writeln('Username: ' .$input->getArgument('username'));
         $output->writeln('Password: ' .$input->getArgument('password'));
         $output->writeln('Email: ' .$input->getArgument('email'));
-        $output->writeln('Role: ROLE_USER');
+        $output->writeln('Role: ROLE_ADMIN');
 
         $passwordEncode = $this->encoderFactory->getEncoder(Client::class)
             ->encodePassword($input->getArgument('password'), null);
@@ -116,10 +116,10 @@ class CreateClientCommand extends Command
         $this->client->setUsername($input->getArgument('username'));
         $this->client->setPassword($passwordEncode);
         $this->client->setEmail($input->getArgument('email'));
-        $this->client->setRoles(['ROLE_USER']);
+        $this->client->setRoles(['ROLE_ADMIN']);
 
         $this->clientRepository->save($this->client);
 
-        $output->writeln('Client successfully created');
+        $output->writeln('Admin successfully created');
     }
 }
