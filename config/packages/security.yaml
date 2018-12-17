@@ -11,6 +11,7 @@ security:
             algorithm: bcrypt
 
     firewalls:
+
         login:
             pattern:  ^/api/login
             stateless: true
@@ -36,9 +37,13 @@ security:
             pattern: ^/api
             provider: in_database
 
+
+
     access_control:
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api/phones,       roles: IS_AUTHENTICATED_FULLY }
-        - { path: ^/api/client,       roles: IS_AUTHENTICATED_FULLY }
-        - { path: ^/api/user,       roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/api/phones, roles: ROLE_ADMIN, methods:[GET,POST,DELETE,PUT]}
+        - { path: ^/api/phones, roles: ROLE_USER, methods: GET}
+        - { path: ^/api/client, roles: ROLE_ADMIN, methods:[GET,POST,DELETE,PUT] }
+        - { path: ^/api/user, roles: ROLE_ADMIN, methods:[GET,POST,DELETE,PUT] }
+        - { path: ^/api/user, roles: ROLE_USER, methods:[GET,POST,DELETE,PUT] }
 

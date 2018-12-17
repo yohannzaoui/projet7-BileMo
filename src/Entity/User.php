@@ -3,19 +3,24 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use Ramsey\Uuid\Uuid;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(attributes={"order"={"name":"ASC"}})
+ *
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User
 {
     /**
+     * @var string The id of this phone
+     *
      * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="guid")
+     * @Assert\NotBlank()
+     * @Assert\Uuid()
      */
     private $id;
 
@@ -57,13 +62,14 @@ class User
      */
     public function __construct()
     {
+        $this->id = Uuid::uuid4();
         $this->createdAt = new \DateTime();
     }
 
     /**
-     * @return int|null
+     * @return string
      */
-    public function getId(): ?int
+    public function getId(): string
     {
         return $this->id;
     }
