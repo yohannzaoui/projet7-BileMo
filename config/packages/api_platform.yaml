@@ -22,11 +22,6 @@ api_platform:
 
     enable_swagger: true
 
-    graphql:
-        enabled: true
-        graphiql:
-            enabled: true
-
     formats:
         jsonld:
             mime_types: ['application/ld+json']
