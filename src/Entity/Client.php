@@ -22,47 +22,49 @@ class Client implements UserInterface
      *
      * @ORM\Id()
      * @ORM\Column(type="guid")
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="This value should not be blank")
      * @Assert\Uuid()
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=255, unique=true)
+     * @Assert\NotBlank(message="This value should not be blank")
+     */
+    private $username;
+
+    /**
+     * @ORM\Column(type="string", length=255, unique=true)
+     * @Assert\NotBlank(message="This value should not be blank")
      * @Assert\Email(message="Email address not valid")
+     *
      */
     private $email;
 
     /**
-     * @ORM\Column(type="datetime")
-     * @Assert\DateTime()
-     */
-    private $createdAt;
-
-    /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="This value should not be blank")
      *
      */
     private $password;
 
     /**
-     * @ORM\Column(type="array")
-     */
-    private $roles = [];
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
-     */
-    private $username;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="integer", length=10, nullable=true)
      * @Assert\Type("numeric")
      */
     private $phoneNumber;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @Assert\DateTime()
+     * @Assert\NotBlank(message="This value should not be blank")
+     */
+    private $createdAt;
+
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $roles = [];
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client")
@@ -90,9 +92,9 @@ class Client implements UserInterface
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getEmail(): ?string
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -111,7 +113,7 @@ class Client implements UserInterface
     /**
      * @return \DateTimeInterface|null
      */
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getCreatedAt(): \DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -128,9 +130,9 @@ class Client implements UserInterface
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getPassword(): ?string
+    public function getPassword(): string
     {
         return $this->password;
     }
@@ -147,9 +149,9 @@ class Client implements UserInterface
     }
 
     /**
-     * @return array|null
+     * @return array
      */
-    public function getRoles(): ?array
+    public function getRoles(): array
     {
         return $this->roles;
     }
@@ -166,9 +168,9 @@ class Client implements UserInterface
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getUsername(): ?string
+    public function getUsername(): string
     {
         return $this->username;
     }

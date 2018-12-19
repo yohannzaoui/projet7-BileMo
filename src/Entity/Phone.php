@@ -19,7 +19,7 @@ class Phone
      *
      * @ORM\Id()
      * @ORM\Column(type="guid")
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="This value should not be blank")
      * @Assert\Uuid()
      */
     private $id;
@@ -29,7 +29,7 @@ class Phone
      * @var string Brand of this phone
      *
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="This value should not be blank")
      */
     private $brand;
 
@@ -37,7 +37,7 @@ class Phone
      * @var string The reference of this phone
      *
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="This value should not be blank")
      */
     private $reference;
 
@@ -50,9 +50,17 @@ class Phone
     private $color;
 
     /**
+     * @var string The storage of this phone
+     *
+     * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Type("numeric")
+     */
+    private $storage;
+
+    /**
      * @var string The price of this phone
      *
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="integer", nullable=true)
      * @Assert\Type("numeric")
      */
     private $price;
@@ -62,6 +70,7 @@ class Phone
      *
      * @ORM\Column(type="datetime")
      * @Assert\DateTime()
+     * @Assert\NotBlank(message="This value should not be blank")
      */
     private $createdAt;
 
@@ -111,9 +120,9 @@ class Phone
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getReference(): ?string
+    public function getReference(): string
     {
         return $this->reference;
     }
@@ -130,9 +139,9 @@ class Phone
     }
 
     /**
-     * @return \DateTimeInterface|null
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getCreatedAt(): \DateTimeInterface
     {
         return $this->createdAt;
     }
@@ -204,4 +213,21 @@ class Phone
 
         return $this;
     }
+
+    /**
+     * @return string|null
+     */
+    public function getStorage(): ?string
+    {
+        return $this->storage;
+    }
+
+    /**
+     * @param string $storage
+     */
+    public function setStorage(string $storage): void
+    {
+        $this->storage = $storage;
+    }
+
 }

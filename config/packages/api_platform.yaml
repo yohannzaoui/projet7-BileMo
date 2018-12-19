@@ -14,7 +14,7 @@ api_platform:
 
     http_cache:
         etag: true
-        max_age: 10
+        max_age: 50
 
     enable_swagger_ui: true
 

@@ -25,31 +25,28 @@ class User
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=false)
      * @Assert\NotBlank()
      */
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=255, unique=true)
+     * @Assert\NotBlank(message="This value should not be blank")
+     * @Assert\Email(message="Email address not valid")
      */
     private $email;
+
+    /**
+     * @ORM\Column(type="integer", length=10, nullable=true)
+     * @Assert\Type("numeric")
+     */
+    private $phoneNumber;
 
     /**
      * @ORM\Column(type="datetime")
      */
     private $createdAt;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $updatedAt;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $phoneNumber;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="Users")
@@ -75,9 +72,9 @@ class User
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getName(): ?string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -94,9 +91,9 @@ class User
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getEmail(): ?string
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -108,25 +105,6 @@ class User
     public function setEmail(string $email): self
     {
         $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * @return \DateTimeInterface|null
-     */
-    public function getUpdatedAt(): ?\DateTimeInterface
-    {
-        return $this->updatedAt;
-    }
-
-    /**
-     * @param \DateTimeInterface|null $updatedAt
-     * @return User
-     */
-    public function setUpdatedAt(?\DateTimeInterface $updatedAt): self
-    {
-        $this->updatedAt = $updatedAt;
 
         return $this;
     }
@@ -170,9 +148,9 @@ class User
     }
 
     /**
-     * @return mixed
+     * @return \DateTimeInterface
      */
-    public function getCreatedAt()
+    public function getCreatedAt() :\DateTimeInterface
     {
         return $this->createdAt;
     }
