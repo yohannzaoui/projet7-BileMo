@@ -2,13 +2,24 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiFilter;
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use Ramsey\Uuid\Uuid;
+use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource(attributes={"order"={"createdAt":"DESC"}})
+ * @ApiResource(attributes={"order"={"createdAt":"DESC"}},
+ *     collectionOperations={"get"},
+ *     itemOperations={"get"}
+ *     )
+ *
+ * @ApiFilter(
+ *     SearchFilter::class, properties={
+ *     "brand": "partial", "reference": "partial", "price": "partial", "color": "partial", "storage": "partial"
+ * })
  *
  * @ORM\Entity(repositoryClass="App\Repository\PhoneRepository")
  */
@@ -21,6 +32,7 @@ class Phone
      * @ORM\Column(type="guid")
      * @Assert\NotBlank(message="This value should not be blank")
      * @Assert\Uuid()
+     * @Groups({"read"})
      */
     private $id;
 
@@ -79,6 +91,7 @@ class Phone
      *
      * @ORM\Column(type="datetime", nullable=true)
      * @Assert\DateTime()
+     *
      */
     private $updatedAt;
 

@@ -3,13 +3,15 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use Ramsey\Uuid\Uuid;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(attributes={"order"={"name":"ASC"}})
- *
+ * @ApiFilter(SearchFilter::class, properties={"name": "partial"})
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User

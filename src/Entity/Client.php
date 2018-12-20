@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
-use ApiPlatform\Core\Annotation\ApiSubresource;
 use Ramsey\Uuid\Uuid;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -12,7 +11,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource(attributes={"order"={"username":"ASC"}})
+ * @ApiResource(collectionOperations={"get"},itemOperations={"get"})
  * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
  */
 class Client implements UserInterface
@@ -68,7 +67,6 @@ class Client implements UserInterface
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client")
-     * @ApiSubresource()
      */
     private $Users;
 
