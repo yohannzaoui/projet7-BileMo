@@ -24,9 +24,32 @@ class UserRepository extends ServiceEntityRepository
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function save($user)
+    public function save(User $user)
     {
         $this->_em->persist($user);
         $this->_em->flush();
+    }
+
+    /**
+     * @param User $user
+     * @throws \Doctrine\ORM\ORMException
+     */
+    public function delete(User $user)
+    {
+        $this->_em->remove($user);
+        $this->_em->flush();
+    }
+
+    /**
+     * @param $clientId
+     * @return mixed
+     */
+    public function allUsers($clientId)
+    {
+        return $this->createQueryBuilder('user')
+            ->where('user.client = :clientId')
+            ->setParameter('clientId', $clientId)
+            ->getQuery()
+            ->getResult();
     }
 }

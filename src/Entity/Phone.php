@@ -11,7 +11,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource(attributes={"order"={"createdAt":"DESC"}},
+ * @ApiResource(
+ *     attributes={"order"={"createdAt":"DESC"}},
  *     collectionOperations={"get"},
  *     itemOperations={"get"}
  *     )
@@ -21,7 +22,9 @@ use Doctrine\ORM\Mapping as ORM;
  *     "brand": "partial", "reference": "partial", "price": "partial", "color": "partial", "storage": "partial"
  * })
  *
- * @ORM\Entity(repositoryClass="App\Repository\PhoneRepository")
+ * @ORM\Entity(
+ *     repositoryClass="App\Repository\PhoneRepository"
+ * )
  */
 class Phone
 {
@@ -46,12 +49,12 @@ class Phone
     private $brand;
 
     /**
-     * @var string The reference of this phone
+     * @var string The model of this phone
      *
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="This value should not be blank")
      */
-    private $reference;
+    private $model;
 
     /**
      * @var string The color of this phone
@@ -135,18 +138,18 @@ class Phone
     /**
      * @return string
      */
-    public function getReference(): string
+    public function getModel(): string
     {
-        return $this->reference;
+        return $this->model;
     }
 
     /**
-     * @param string $reference
+     * @param string $model
      * @return Phone
      */
-    public function setReference(string $reference): self
+    public function setModel(string $model): self
     {
-        $this->reference = $reference;
+        $this->model = $model;
 
         return $this;
     }

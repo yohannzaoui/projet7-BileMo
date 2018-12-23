@@ -11,8 +11,14 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource(collectionOperations={"get"},itemOperations={"get"})
- * @ORM\Entity(repositoryClass="App\Repository\ClientRepository")
+ * @ApiResource(
+ *     attributes={"access_control"="is_granted('ROLE_ADMIN')"},
+ *     collectionOperations={},
+ *     itemOperations={"GET"}
+ *     )
+ * @ORM\Entity(
+ *     repositoryClass="App\Repository\ClientRepository"
+ * )
  */
 class Client implements UserInterface
 {
@@ -66,7 +72,7 @@ class Client implements UserInterface
     private $roles = [];
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client")
+     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="client", orphanRemoval=true)
      */
     private $Users;
 

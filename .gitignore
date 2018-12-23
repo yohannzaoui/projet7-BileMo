@@ -18,4 +18,6 @@
 /config/jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###
 
-/.idea/
+.idea/
+.idea/dataSources.local.xml
+.idea/workspace.xml
