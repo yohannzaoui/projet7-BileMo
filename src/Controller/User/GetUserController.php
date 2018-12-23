@@ -71,7 +71,7 @@ class GetUserController
 
         if ($user->getClient() != $this->tokenStorage->getToken()->getUser()) {
 
-            return new Response('You do not have access to this resource', Response::HTTP_NOT_ACCEPTABLE);
+            return new Response('You do not have access to this resource', Response::HTTP_NOT_FOUND);
         }
 
         $data = $this->serializer->serialize($user);

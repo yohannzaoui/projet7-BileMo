@@ -61,9 +61,7 @@ class GetUsersController
      */
     public function getUsers()
     {
-        $clientId = $this->tokenStorage->getToken()->getUser()->getId();
-
-        $users = $this->repository->allUsers($clientId);
+        $users = $this->repository->allUsers($this->tokenStorage->getToken()->getUser()->getId());
 
         $data = $this->serializer->serialize($users);
 
