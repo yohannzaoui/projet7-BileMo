@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ceee25f8-a3c4-48b6-8d13-4fd8d2fc5e69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Annotation/UserAware.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EventListener/UserFilterConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Filter/UserFilter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/GetUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/User/GetUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/GetUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/User/GetUsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -53,7 +47,17 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://6d58ab2a-1e3d-4f30-a114-c3b5efd79e49/schema/bilemo/table/user">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -387,12 +391,12 @@
       <workItem from="1545473398261" duration="2865000" />
       <workItem from="1545493752579" duration="1442000" />
       <workItem from="1545517933921" duration="2760000" />
-      <workItem from="1545556751244" duration="32588000" />
+      <workItem from="1545556751244" duration="33784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289125000" />
+    <option name="totallyTimeSpent" value="290321000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -405,8 +409,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916247" visible="true" weight="0.16912752" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916247" visible="true" weight="0.16912752" />
       <window_info id="Structure" order="1" sideWeight="0.5008375" side_tool="true" weight="0.2" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -427,7 +432,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.19261745" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.19261745" />
       <window_info anchor="right" id="PlantUML" order="4" weight="0.3295302" />
     </layout>
     <layout-to-restore>
@@ -611,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://6d58ab2a-1e3d-4f30-a114-c3b5efd79e49/schema/bilemo/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Phone/AddPhoneController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-401">
@@ -758,6 +756,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6d58ab2a-1e3d-4f30-a114-c3b5efd79e49/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
