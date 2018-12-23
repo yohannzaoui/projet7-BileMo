@@ -40,3 +40,9 @@ api_platform:
             client_enabled: true
             enabled_parameter_name: pagination
 
+doctrine:
+    orm:
+        filters:
+            user_filter:
+                class: App\Filter\UserFilter
+

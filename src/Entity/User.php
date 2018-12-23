@@ -8,8 +8,11 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 use Ramsey\Uuid\Uuid;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use App\Annotation\UserAware;
 
 /**
+ * @UserAware(userFieldName="client_id")
+ *
  * @ApiResource(
  *     attributes={"access_control"="is_granted('ROLE_USER')"}
  *     )
