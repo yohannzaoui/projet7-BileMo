@@ -13,6 +13,7 @@ use App\Repository\UserRepository;
 use App\Services\Serializer;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
@@ -55,9 +56,9 @@ class GetUserController
 
     /**
      * @Route(path="/api2/users/{id}", name="user", methods={"GET"})
-     * @param $id
-     * @return JsonResponse
      * @IsGranted("ROLE_USER")
+     * @param $id
+     * @return JsonResponse|Response
      */
     public function getUser($id)
     {
@@ -65,12 +66,12 @@ class GetUserController
 
         if (!$user) {
 
-            return new JsonResponse('User unknown', JsonResponse::HTTP_BAD_REQUEST);
+            return new Response('Unknown user', Response::HTTP_NOT_FOUND);
         }
 
         if ($user->getClient() != $this->tokenStorage->getToken()->getUser()) {
 
-            return new JsonResponse('you do not have access to this resource', JsonResponse::HTTP_BAD_REQUEST);
+            return new Response('You do not have access to this resource', Response::HTTP_NOT_ACCEPTABLE);
         }
 
         $data = $this->serializer->serialize($user);

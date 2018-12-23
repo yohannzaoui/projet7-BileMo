@@ -11,6 +11,7 @@ namespace App\Controller\Phone;
 use App\Repository\PhoneRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use App\Services\Serializer;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
@@ -46,7 +47,7 @@ class GetPhoneController
     /**
      * @Route(path="/api2/phones/{id}", name="phone", methods={"GET"})
      * @param $id
-     * @return JsonResponse
+     * @return JsonResponse | Response
      * @IsGranted("ROLE_USER")
      */
     public function getPhone($id)
@@ -55,7 +56,7 @@ class GetPhoneController
 
         if (!$phone) {
 
-            return new JsonResponse('Phone unknown', JsonResponse::HTTP_BAD_REQUEST);
+            return new Response('Unknown phone', Response::HTTP_BAD_REQUEST);
         }
 
         $data = $this->serializer->serialize($phone);

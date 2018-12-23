@@ -13,6 +13,7 @@ use App\Services\Serializer;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
@@ -66,7 +67,7 @@ class AddUserController
      * @Route(path="/api2/users", name="addUser", methods={"POST"})
      * @IsGranted("ROLE_USER")
      * @param Request $request
-     * @return JsonResponse
+     * @return JsonResponse| Response
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
@@ -78,7 +79,7 @@ class AddUserController
 
         if (count($errors)) {
 
-            return new JsonResponse((string) $errors, JsonResponse::HTTP_FOUND);
+            return new Response((string)$errors, Response::HTTP_BAD_REQUEST );
         }
 
         $user->setClient($this->tokenStorage->getToken()->getUser());

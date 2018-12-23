@@ -61,10 +61,10 @@ security:
         - { path: ^/api/clients, roles: [ROLE_ADMIN], methods:[GET,POST,DELETE,PUT]}
         - { path: ^/api/phones, roles: [ROLE_ADMIN], methods:[GET,POST,DELETE,PUT]}
         - { path: ^/api/users, roles: [ROLE_USER], methods:[GET,POST,DELETE,PUT] }
-        -
-        - { path: ^/api2/phones, roles: [ROLE_ADMIN], methods: [POST, DELETE]}
-        - { path: ^/api2/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+
         - { path: ^/api2/phones, roles: [ROLE_USER], methods:[GET]}
+        - { path: ^/api2/phones, roles: [ROLE_ADMIN], methods: [POST,DELETE]}
+        - { path: ^/api2/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api2/users, roles: [ROLE_USER], methods:[GET]}
 
 

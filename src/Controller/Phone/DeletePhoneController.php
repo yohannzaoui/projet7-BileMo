@@ -11,7 +11,7 @@ namespace App\Controller\Phone;
 
 use App\Repository\PhoneRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -38,7 +38,7 @@ class DeletePhoneController
      * @Route(path="/api2/phones/{id}", name="deletePhone", methods={"DELETE"})
      * @IsGranted("ROLE_ADMIN")
      * @param $id
-     * @return JsonResponse
+     * @return Response
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
@@ -48,11 +48,11 @@ class DeletePhoneController
 
         if (!$phone) {
 
-            return new JsonResponse('Phone not found', JsonResponse::HTTP_BAD_REQUEST);
+            return new Response('Phone not found', Response::HTTP_BAD_REQUEST);
         }
 
         $this->repository->delete($phone);
 
-        return new JsonResponse('Phone deleted', JsonResponse::HTTP_OK);
+        return new Response('Phone deleted', Response::HTTP_OK);
     }
 }

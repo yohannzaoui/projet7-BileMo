@@ -12,7 +12,7 @@ namespace App\Controller\Phone;
 use App\Repository\PhoneRepository;
 use App\Services\Serializer;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -50,7 +50,7 @@ class AddPhoneController
      * @Route(path="/api2/phones", name="addPhone", methods={"POST"})
      * @IsGranted("ROLE_ADMIN")
      * @param Request $request
-     * @return JsonResponse
+     * @return Response
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
@@ -60,6 +60,6 @@ class AddPhoneController
 
         $this->repository->save($phone);
 
-        return new JsonResponse('Phone added', JsonResponse::HTTP_OK);
+        return new Response('Phone added', Response::HTTP_OK);
     }
 }
