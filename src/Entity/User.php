@@ -10,9 +10,15 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ApiResource(attributes={"order"={"name":"ASC"}})
- * @ApiFilter(SearchFilter::class, properties={"name": "partial"})
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ApiResource(
+ *     attributes={"access_control"="is_granted('ROLE_USER')"}
+ *     )
+ * @ApiFilter(
+ *     SearchFilter::class, properties={"name": "partial"}
+ *     )
+ * @ORM\Entity(
+ *     repositoryClass="App\Repository\UserRepository"
+ *     )
  */
 class User
 {
@@ -51,7 +57,9 @@ class User
     private $createdAt;
 
     /**
+     * @var Client
      * @ORM\ManyToOne(targetEntity="App\Entity\Client", inversedBy="Users")
+     * @ORM\JoinColumn(name="client_id", referencedColumnName="id")
      */
     private $client;
 
