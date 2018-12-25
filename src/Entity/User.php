@@ -10,13 +10,17 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use App\Annotation\UserAware;
 use App\Controller\Api\AddUserController;
+use App\Controller\Api\GetUsersController;
 
 /**
  * @UserAware(userFieldName="client_id")
  *
  * @ApiResource(
  *     attributes={"access_control"="is_granted('ROLE_USER')"},
- *     itemOperations={"get","delete",
+ *     itemOperations={"get"={
+ *     "method"="GET",
+ *     "path"="/api/users",
+ *     "controller"=GetUsersController::class},"delete",
  *     "post_publication"={
  *     "method"="POST",
  *     "path"="/api/users",
