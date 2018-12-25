@@ -9,16 +9,23 @@ use Ramsey\Uuid\Uuid;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use App\Annotation\UserAware;
+use App\Controller\Api\AddUserController;
 
 /**
  * @UserAware(userFieldName="client_id")
  *
  * @ApiResource(
- *     attributes={"access_control"="is_granted('ROLE_USER')"}
- *     )
+ *     attributes={"access_control"="is_granted('ROLE_USER')"},
+ *     itemOperations={"get","delete",
+ *     "post_publication"={
+ *     "method"="POST",
+ *     "path"="/api/users",
+ *     "controller"=AddUserController::class}})
+ *
  * @ApiFilter(
  *     SearchFilter::class, properties={"name": "partial"}
  *     )
+ *
  * @ORM\Entity(
  *     repositoryClass="App\Repository\UserRepository"
  *     )

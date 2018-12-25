@@ -6,7 +6,7 @@
  * Time: 10:22
  */
 
-namespace App\Controller\User;
+namespace App\Controller\Api2\User;
 
 
 use App\Repository\UserRepository;

@@ -6,7 +6,7 @@
  * Time: 00:21
  */
 
-namespace App\Controller\Phone;
+namespace App\Controller\Api2\Phone;
 
 use App\Repository\PhoneRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;

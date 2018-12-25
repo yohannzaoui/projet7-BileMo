@@ -6,7 +6,7 @@
  * Time: 00:12
  */
 
-namespace App\Controller\Phone;
+namespace App\Controller\Api2\Phone;
 
 
 use App\Repository\PhoneRepository;
