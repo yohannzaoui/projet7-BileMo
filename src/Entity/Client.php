@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ApiResource(
  *     attributes={"access_control"="is_granted('ROLE_ADMIN')"},
  *     collectionOperations={},
- *     itemOperations={"GET"}
+ *     itemOperations={}
  *     )
  * @ORM\Entity(
  *     repositoryClass="App\Repository\ClientRepository"

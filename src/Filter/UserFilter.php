@@ -13,10 +13,22 @@ use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Query\Filter\SQLFilter;
 use Doctrine\Common\Annotations\Reader;
 
+/**
+ * Class UserFilter
+ * @package App\Filter
+ */
 class UserFilter extends SQLFilter
 {
+    /**
+     * @var
+     */
     private $reader;
 
+    /**
+     * @param ClassMetadata $targetEntity
+     * @param string $targetTableAlias
+     * @return string
+     */
     public function addFilterConstraint(ClassMetadata $targetEntity, $targetTableAlias)
     {
         if (null === $this->reader) {
@@ -46,6 +58,9 @@ class UserFilter extends SQLFilter
         return sprintf('%s.%s = %s', $targetTableAlias, $fieldName, $userId);
     }
 
+    /**
+     * @param Reader $reader
+     */
     public function setAnnotationReader(Reader $reader): void
     {
         $this->reader = $reader;

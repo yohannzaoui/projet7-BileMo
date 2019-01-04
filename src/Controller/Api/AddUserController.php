@@ -6,13 +6,14 @@
  * Time: 11:01
  */
 
+declare(strict_types=1);
+
 namespace App\Controller\Api;
 
 
 use App\Repository\UserRepository;
 use App\Services\Serializer;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -64,7 +65,7 @@ class AddUserController
      * @Route(path="/api/users", name="addUser", methods={"POST"})
      * @IsGranted("ROLE_USER")
      * @param Request $request
-     * @return JsonResponse| Response
+     * @return Response
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
@@ -72,17 +73,19 @@ class AddUserController
     {
         $user = $this->serializer->deserializeUser($request->getContent());
 
+        //dd($user);
+
         $errors = $this->validator->validate($user);
 
         if (count($errors)) {
 
-            return new Response((string)$errors, Response::HTTP_BAD_REQUEST );
+            return new Response((string)$errors, Response::HTTP_BAD_REQUEST);
         }
 
         $user->setClient($this->tokenStorage->getToken()->getUser());
 
         $this->repository->save($user);
 
-        return new JsonResponse('User added', JsonResponse::HTTP_ACCEPTED);
+        return new Response('User added', Response::HTTP_ACCEPTED);
     }
 }

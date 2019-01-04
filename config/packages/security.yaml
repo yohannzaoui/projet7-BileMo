@@ -21,25 +21,12 @@ security:
                 success_handler:          lexik_jwt_authentication.handler.authentication_success
                 failure_handler:          lexik_jwt_authentication.handler.authentication_failure
 
-        login2:
-            pattern: ^/api2/login
-            stateless: true
-            anonymous: true
-            json_login:
-                check_path: /api2/login_check
-                success_handler: lexik_jwt_authentication.handler.authentication_success
-                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+
 
         api:
-            pattern: ^/api/
+            pattern: ^/api
             stateless: true
-            guard:
-                authenticators:
-                    - lexik_jwt_authentication.jwt_token_authenticator
-
-        api2:
-            pattern: ^/api2/
-            stateless: true
+            anonymous: true
             guard:
                 authenticators:
                     - lexik_jwt_authentication.jwt_token_authenticator
@@ -48,24 +35,19 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
-        main:
-            anonymous: ~
-            pattern: ^/api
+
 
     role_hierarchy:
         ROLE_ADMIN: ROLE_USER
 
     access_control:
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/api/phones, roles: [ROLE_USER], methods: [GET]}
-        - { path: ^/api/clients, roles: [ROLE_ADMIN], methods:[GET,POST,DELETE,PUT]}
         - { path: ^/api/phones, roles: [ROLE_ADMIN], methods:[GET,POST,DELETE,PUT]}
+        - { path: ^/api/clients, roles: [ROLE_ADMIN], methods:[GET,POST,DELETE,PUT]}
         - { path: ^/api/users, roles: [ROLE_USER], methods:[GET,POST,DELETE,PUT] }
-
-        - { path: ^/api2/phones, roles: [ROLE_USER], methods:[GET]}
-        - { path: ^/api2/phones, roles: [ROLE_ADMIN], methods: [POST,DELETE]}
-        - { path: ^/api2/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api2/users, roles: [ROLE_USER], methods:[GET]}
 
 
 
