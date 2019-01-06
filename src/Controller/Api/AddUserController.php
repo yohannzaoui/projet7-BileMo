@@ -73,8 +73,6 @@ class AddUserController
     {
         $user = $this->serializer->deserializeUser($request->getContent());
 
-        //dd($user);
-
         $errors = $this->validator->validate($user);
 
         if (count($errors)) {
