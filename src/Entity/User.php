@@ -42,14 +42,14 @@ class User
      * @ORM\Column(type="guid")
      * @Assert\NotBlank()
      * @Assert\Uuid()
-     * @Groups("read")
+     * @Groups({"read","write"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
      * @Assert\NotBlank()
-     * @Groups("read")
+     * @Groups({"read","write"})
      */
     private $name;
 
@@ -57,20 +57,20 @@ class User
      * @ORM\Column(type="string", length=255, unique=true)
      * @Assert\NotBlank(message="This value should not be blank")
      * @Assert\Email(message="Email address not valid")
-     * @Groups("read")
+     * @Groups({"read","write"})
      */
     private $email;
 
     /**
      * @ORM\Column(type="integer", length=10, nullable=true)
      * @Assert\Type("numeric")
-     * @Groups("read")
+     * @Groups({"read","write"})
      */
     private $phoneNumber;
 
     /**
      * @ORM\Column(type="datetime")
-     * @Groups("read")
+     * @Groups({"read","write"})
      */
     private $createdAt;
 
