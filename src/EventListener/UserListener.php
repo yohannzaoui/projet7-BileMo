@@ -10,7 +10,6 @@ namespace App\EventListener;
 
 
 use App\Entity\User;
-use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class UserListener
@@ -25,12 +24,14 @@ class UserListener
 
 
     /**
-     * @ORM\PrePersist()
      * @param User $user
      */
-    public function addUser(User $user)
+    public function prePersist(User $user)
     {
-        $client = $this->tokenStorage->getToken()->getUser();
-        $user->setClient($client);
+        if ($this->tokenStorage->getToken()->getUser()) {
+
+            $user->setClient($this->tokenStorage->getToken()->getUser());
+        }
+
     }
 }
