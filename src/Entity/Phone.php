@@ -12,7 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(
- *     attributes={"order"={"createdAt":"DESC"}},
+ *     attributes={"order"={"createdAt":"DESC"},
+ *     "access_control"="is_granted('ROLE_USER')"},
  *     collectionOperations={"get"},
  *     itemOperations={"get"}
  *     )

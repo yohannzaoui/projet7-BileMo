@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/config/routes/annotations.yaml" line="0" mnemonic="8" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ceee25f8-a3c4-48b6-8d13-4fd8d2fc5e69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/projet7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet7.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Phone.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Phone.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventListener/UserListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventListener/UserListener.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,10 +57,46 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
+        <entry file="file://$PROJECT_DIR$/config/services.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            <state relative-caret-position="454">
+              <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+              <folding>
+                <element signature="e#30#74#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EventListener/UserListener.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+              <folding>
+                <element signature="e#127#147#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EventListener/UserFilterConfigurator.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+              <folding>
+                <element signature="e#126#166#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,7 +110,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -93,8 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Entity/Picture.php" />
-        <option value="$PROJECT_DIR$/src/Entity/MediaObject.php" />
         <option value="$PROJECT_DIR$/config/bundles.php" />
         <option value="$PROJECT_DIR$/src/Doctrine/CurrentUserExtension.php" />
         <option value="$PROJECT_DIR$/src/Controller/GetPhonesController.php" />
@@ -108,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/Controller/DeleteUserController.php" />
         <option value="$PROJECT_DIR$/src/Repository/PhoneRepository.php" />
         <option value="$PROJECT_DIR$/src/Controller/Phone/GetPhonesController.php" />
-        <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Controller/User/DeleteUserController.php" />
         <option value="$PROJECT_DIR$/src/Controller/User/AddUserController.php" />
@@ -129,21 +167,24 @@
         <option value="$PROJECT_DIR$/src/Controller/Api2/User/GetUserController.php" />
         <option value="$PROJECT_DIR$/src/Controller/Api2/User/GetUsersController.php" />
         <option value="$PROJECT_DIR$/src/Controller/Api/GetUsersController.php" />
-        <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/Api/ListUsersController.php" />
         <option value="$PROJECT_DIR$/src/Filter/UserFilter.php" />
         <option value="$PROJECT_DIR$/src/Controller/Api/UsersListController.php" />
-        <option value="$PROJECT_DIR$/config/packages/api_platform.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/ApiController.php" />
         <option value="$PROJECT_DIR$/config/routes/api_platform.yaml" />
         <option value="$PROJECT_DIR$/src/EventListener/UserFilterConfigurator.php" />
-        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/src/Entity/Client.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/config/packages/api_platform.yaml" />
         <option value="$PROJECT_DIR$/src/Entity/Phone.php" />
-        <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
+        <option value="$PROJECT_DIR$/config/routes/annotations.yaml" />
+        <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/Api/AddUserController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/User.php" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/src/EventListener/UserListener.php" />
       </list>
     </option>
   </component>
@@ -270,7 +311,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="950" />
-    <option name="width" value="979" />
+    <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -279,7 +320,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -290,12 +330,30 @@
             <path>
               <item name="projet7" type="b2602c69:ProjectViewProjectNode" />
               <item name="projet7" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projet7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet7" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projet7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet7" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projet7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet7" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="EventListener" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,17 +367,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projet7\src\Controller\Api" />
-      <recent name="D:\projet7\src\Command" />
-      <recent name="D:\projet7\src\Controller\Phone" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projet7\src\Controller\Api2" />
       <recent name="D:\projet7\src\Controller\Phone" />
       <recent name="D:\projet7\src\Controller\User" />
       <recent name="D:\projet7\public\images" />
       <recent name="D:\projet7\public\bundles\apiplatform" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projet7\src\Controller\Api" />
+      <recent name="D:\projet7\src\Command" />
+      <recent name="D:\projet7\src\Controller\Phone" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -444,12 +502,18 @@
       <workItem from="1546624061573" duration="977000" />
       <workItem from="1546627915836" duration="3790000" />
       <workItem from="1546763851771" duration="299000" />
-      <workItem from="1546982604422" duration="2212000" />
+      <workItem from="1546982604422" duration="2633000" />
+      <workItem from="1547018414319" duration="36000" />
+      <workItem from="1547109548425" duration="676000" />
+      <workItem from="1547111918907" duration="98000" />
+      <workItem from="1547112077010" duration="59000" />
+      <workItem from="1547113090831" duration="465000" />
+      <workItem from="1547202128598" duration="11664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333238000" />
+    <option name="totallyTimeSpent" value="346657000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -464,7 +528,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916247" visible="true" weight="0.23154363" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916247" visible="true" weight="0.17181209" />
       <window_info id="Structure" order="1" sideWeight="0.5008375" side_tool="true" weight="0.2" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -476,7 +540,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" weight="0.3286119" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.9320113" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3286119" />
@@ -518,118 +582,41 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/P7-API-BileMo" />
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/framework-bundle/Controller/AbstractController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-422">
-          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Api2/User/GetUsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/Action/ExceptionAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/Action/EntrypointAction.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/Annotation/ApiFilter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-563" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/Annotation/ApiSubresource.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/Cache/CachedTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/DataPersister/ChainDataPersister.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/EventListener/SerializeListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-950" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/Documentation/Action/DocumentationAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/DataProvider/OperationDataProviderTrait.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/DataProvider/ChainCollectionDataProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-387" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/Hal/Serializer/ItemNormalizer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/Hal/Serializer/EntrypointNormalizer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-685" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/Hal/Serializer/CollectionNormalizer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-919" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/src/HttpCache/VarnishPurger.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/api-platform/core/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="8" selection-start-line="8" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/log/dev.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/bundles.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes/annotations.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/routing.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Api2/User/AddUserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-756">
+        <state relative-caret-position="-634">
           <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
           <folding>
             <element signature="e#133#167#0#PHP" expanded="true" />
@@ -637,149 +624,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/api_platform.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EventListener/UserFilterConfigurator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding>
-            <element signature="e#126#166#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes/api_platform.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Filter/UserFilter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Annotation/UserAware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Api/UsersListController.php" />
-    <entry file="file://$PROJECT_DIR$/src/Controller/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6d58ab2a-1e3d-4f30-a114-c3b5efd79e49/schema/bilemo/table/client" />
-    <entry file="das://6d58ab2a-1e3d-4f30-a114-c3b5efd79e49/schema/bilemo/table/user" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/19626609-70d7-45c9-ad21-1ceb06ca6981/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/280fe2c2-e106-4489-926c-146d0a1ea70b/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Command/CreateAdminCommand.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Services/Serializer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding>
-            <element signature="e#122#143#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Phone.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state relative-caret-position="171">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
           <folding>
             <element signature="e#30#72#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/phone" />
-    <entry file="file://$PROJECT_DIR$/src/Entity/Client.php">
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/routing.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/api_platform.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding>
-            <element signature="e#30#74#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Command/CreateUserCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1028" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/config/packages/routing.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/PhoneRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-235" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/ClientRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Api/AddUserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1263">
-          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
-          <folding>
-            <element signature="e#30#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -794,6 +672,312 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/api_platform.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes/annotations.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Api/AddUserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
+          <folding>
+            <element signature="e#128#162#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="37" column="52" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding>
+            <element signature="e#30#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventListener/UserFilterConfigurator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <element signature="e#126#166#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://280fe2c2-e106-4489-926c-146d0a1ea70b/schema/bilemo/table/client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventListener/UserListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="e#127#147#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

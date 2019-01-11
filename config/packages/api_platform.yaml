@@ -16,6 +16,10 @@ api_platform:
         etag: true
         max_age: 50
 
+    graphql:
+        graphiql:
+            enabled: true
+
     enable_swagger_ui: true
 
     enable_docs: true

@@ -10,20 +10,19 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use App\Annotation\UserAware;
-use App\Controller\Api\AddUserController;
 
 /**
  * @UserAware(userFieldName="client_id")
+ *
+ * @ORM\EntityListeners({"App\EventListener\UserListener"})
  *
  * @ApiResource(
  *     normalizationContext={"groups"={"read"}},
  *     denormalizationContext={"groups"={"write"}},
  *     attributes={"access_control"="is_granted('ROLE_USER')"},
- *     itemOperations={"get","delete",
- *     "post_publication"={
- *     "method"="POST",
- *     "path"="/api/users",
- *     "controller"=AddUserController::class}})
+ *     itemOperations={"get","delete"},
+ *     collectionOperations={"get","post"}
+ * )
  *
  * @ApiFilter(
  *     SearchFilter::class, properties={"name": "partial"}

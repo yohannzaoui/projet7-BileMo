@@ -22,16 +22,13 @@ class UserListener
         $this->tokenStorage = $tokenStorage;
     }
 
+    public function OnKernelRequest()
+    {
 
-    /**
-     * @param User $user
-     */
+    }
+
     public function prePersist(User $user)
     {
-        if ($this->tokenStorage->getToken()->getUser()) {
-
-            $user->setClient($this->tokenStorage->getToken()->getUser());
-        }
-
+        $user->setClient($this->tokenStorage->getToken()->getUser());
     }
 }
