@@ -25,7 +25,7 @@ class CreateUserCommand extends Command
     /**
      * @var UserRepository
      */
-    private $userRepository;
+    private $repository;
 
     /**
      * @var User
@@ -45,18 +45,18 @@ class CreateUserCommand extends Command
 
     /**
      * CreateUserCommand constructor.
-     * @param UserRepository $userRepository
+     * @param UserRepository $repository
      * @param bool $name
      * @param bool $email
      * @throws \Exception
      */
     public function __construct(
-        UserRepository $userRepository,
+        UserRepository $repository,
         $name = true,
         $email = true
     ) {
         parent::__construct();
-        $this->userRepository = $userRepository;
+        $this->repository = $repository;
         $this->user = new User();
         $this->name = $name;
         $this->email = $email;
@@ -93,7 +93,7 @@ class CreateUserCommand extends Command
         $this->user->setName($input->getArgument('name'));
         $this->user->setEmail($input->getArgument('email'));
 
-        $this->userRepository->save($this->user);
+        $this->repository->save($this->user);
 
         $output->writeln('user successfully created');
     }

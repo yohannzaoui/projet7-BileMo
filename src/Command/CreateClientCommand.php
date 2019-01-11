@@ -31,7 +31,7 @@ class CreateClientCommand extends Command
     /**
      * @var ClientRepository
      */
-    private $clientRepository;
+    private $repository;
 
     /**
      * @var Client
@@ -57,7 +57,7 @@ class CreateClientCommand extends Command
     /**
      * CreateAdminCommand constructor.
      * @param EncoderFactoryInterface $encoderFactory
-     * @param ClientRepository $userRepository
+     * @param ClientRepository $repository
      * @param bool $username
      * @param bool $password
      * @param bool $email
@@ -65,14 +65,14 @@ class CreateClientCommand extends Command
      */
     public function __construct(
         EncoderFactoryInterface $encoderFactory,
-        ClientRepository $userRepository,
+        ClientRepository $repository,
         $username = true,
         $password = true,
         $email = true
     ) {
         parent::__construct();
         $this->encoderFactory = $encoderFactory;
-        $this->clientRepository = $userRepository;
+        $this->repository = $repository;
         $this->client = new Client();
         $this->username = $username;
         $this->password = $password;
@@ -98,7 +98,7 @@ class CreateClientCommand extends Command
     /**
      * @param InputInterface $input
      * @param OutputInterface $output
-     * @return int|null|void
+     * @return int|void|null
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
@@ -118,7 +118,7 @@ class CreateClientCommand extends Command
         $this->client->setEmail($input->getArgument('email'));
         $this->client->setRoles(['ROLE_USER']);
 
-        $this->clientRepository->save($this->client);
+        $this->repository->save($this->client);
 
         $output->writeln('Client successfully created');
     }

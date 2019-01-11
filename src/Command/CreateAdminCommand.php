@@ -31,12 +31,12 @@ class CreateAdminCommand extends Command
     /**
      * @var ClientRepository
      */
-    private $clientRepository;
+    private $repository;
 
     /**
-     * @var Client
+     * @var Admin
      */
-    private $client;
+    private $admin;
 
     /**
      * @var bool
@@ -57,7 +57,7 @@ class CreateAdminCommand extends Command
     /**
      * CreateAdminCommand constructor.
      * @param EncoderFactoryInterface $encoderFactory
-     * @param ClientRepository $userRepository
+     * @param ClientRepository $repository
      * @param bool $username
      * @param bool $password
      * @param bool $email
@@ -65,15 +65,15 @@ class CreateAdminCommand extends Command
      */
     public function __construct(
         EncoderFactoryInterface $encoderFactory,
-        ClientRepository $userRepository,
+        ClientRepository $repository,
         $username = true,
         $password = true,
         $email = true
     ) {
         parent::__construct();
         $this->encoderFactory = $encoderFactory;
-        $this->clientRepository = $userRepository;
-        $this->client = new Client();
+        $this->repository = $repository;
+        $this->admin = new Client();
         $this->username = $username;
         $this->password = $password;
         $this->email = $email;
@@ -113,12 +113,12 @@ class CreateAdminCommand extends Command
         $passwordEncode = $this->encoderFactory->getEncoder(Client::class)
             ->encodePassword($input->getArgument('password'), null);
 
-        $this->client->setUsername($input->getArgument('username'));
-        $this->client->setPassword($passwordEncode);
-        $this->client->setEmail($input->getArgument('email'));
-        $this->client->setRoles(['ROLE_ADMIN']);
+        $this->admin->setUsername($input->getArgument('username'));
+        $this->admin->setPassword($passwordEncode);
+        $this->admin->setEmail($input->getArgument('email'));
+        $this->admin->setRoles(['ROLE_ADMIN']);
 
-        $this->clientRepository->save($this->client);
+        $this->repository->save($this->admin);
 
         $output->writeln('Admin successfully created');
     }
