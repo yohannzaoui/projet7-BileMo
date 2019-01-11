@@ -6,3 +6,16 @@ Developped with :
 - API PlatForm
 - Lexik JWT
 - Uuid
+
+Install API:
+
+- Download repository : https://github.com/yohannzaoui/projet7-BileMo/archive/master.zip
+
+- Set your .env file with your database parameters :
+example : DATABASE_URL=mysql://root@127.0.0.1:3306/bilemo
+
+Configure authentication: 
+
+- SSH keys and Security.yaml :
+https://github.com/lexik/LexikJWTAuthenticationBundle/blob/master/Resources/doc/index.md#configuration
+
