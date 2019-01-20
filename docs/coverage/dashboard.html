@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for D:\projet7\src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=".css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/style.css" rel="stylesheet" type="text/css">
+  <link href=".css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">D:\projet7\src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Command/CreateAdminCommand.php.html#23">App\Command\CreateAdminCommand</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219072924.php.html#11">DoctrineMigrations\Version20181219072924</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PhoneRepository.php.html#20">App\Repository\PhoneRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ClientRepository.php.html#20">App\Repository\ClientRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20190104175112.php.html#11">DoctrineMigrations\Version20190104175112</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181222160026.php.html#11">DoctrineMigrations\Version20181222160026</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181222155901.php.html#11">DoctrineMigrations\Version20181222155901</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181221144706.php.html#11">DoctrineMigrations\Version20181221144706</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219110751.php.html#11">DoctrineMigrations\Version20181219110751</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219110232.php.html#11">DoctrineMigrations\Version20181219110232</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219103859.php.html#11">DoctrineMigrations\Version20181219103859</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219103438.php.html#11">DoctrineMigrations\Version20181219103438</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218171432.php.html#11">DoctrineMigrations\Version20181218171432</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateClientCommand.php.html#23">App\Command\CreateClientCommand</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218170816.php.html#11">DoctrineMigrations\Version20181218170816</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218165613.php.html#11">DoctrineMigrations\Version20181218165613</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218161605.php.html#11">DoctrineMigrations\Version20181218161605</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218092521.php.html#11">DoctrineMigrations\Version20181218092521</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Filter/UserFilter.php.html#20">App\Filter\UserFilter</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateUserCommand.php.html#22">App\Command\CreateUserCommand</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#20">App\Repository\UserRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#12">App\Kernel</a></td><td class="text-right">30%</td></tr>
+       <tr><td><a href="EventListener/UserFilterConfigurator.php.html#20">App\EventListener\UserFilterConfigurator</a></td><td class="text-right">57%</td></tr>
+       <tr><td><a href="EventListener/UserListener.php.html#19">App\EventListener\UserListener</a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="Entity/Client.php.html#25">App\Entity\Client</a></td><td class="text-right">62%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Filter/UserFilter.php.html#20">App\Filter\UserFilter</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Entity/Client.php.html#25">App\Entity\Client</a></td><td class="text-right">50</td></tr>
+       <tr><td><a href="Kernel.php.html#12">App\Kernel</a></td><td class="text-right">23</td></tr>
+       <tr><td><a href="EventListener/UserFilterConfigurator.php.html#20">App\EventListener\UserFilterConfigurator</a></td><td class="text-right">10</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Command/CreateAdminCommand.php.html#66"><abbr title="App\Command\CreateAdminCommand::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219110751.php.html#22"><abbr title="DoctrineMigrations\Version20181219110751::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218170816.php.html#21"><abbr title="DoctrineMigrations\Version20181218170816::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218171432.php.html#13"><abbr title="DoctrineMigrations\Version20181218171432::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218171432.php.html#22"><abbr title="DoctrineMigrations\Version20181218171432::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219072924.php.html#13"><abbr title="DoctrineMigrations\Version20181219072924::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219072924.php.html#24"><abbr title="DoctrineMigrations\Version20181219072924::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219103438.php.html#13"><abbr title="DoctrineMigrations\Version20181219103438::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219103438.php.html#21"><abbr title="DoctrineMigrations\Version20181219103438::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219103859.php.html#13"><abbr title="DoctrineMigrations\Version20181219103859::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219103859.php.html#21"><abbr title="DoctrineMigrations\Version20181219103859::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219110232.php.html#13"><abbr title="DoctrineMigrations\Version20181219110232::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219110232.php.html#21"><abbr title="DoctrineMigrations\Version20181219110232::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181219110751.php.html#13"><abbr title="DoctrineMigrations\Version20181219110751::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181221144706.php.html#13"><abbr title="DoctrineMigrations\Version20181221144706::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218165613.php.html#21"><abbr title="DoctrineMigrations\Version20181218165613::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181221144706.php.html#21"><abbr title="DoctrineMigrations\Version20181221144706::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181222155901.php.html#13"><abbr title="DoctrineMigrations\Version20181222155901::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181222155901.php.html#25"><abbr title="DoctrineMigrations\Version20181222155901::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181222160026.php.html#13"><abbr title="DoctrineMigrations\Version20181222160026::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181222160026.php.html#25"><abbr title="DoctrineMigrations\Version20181222160026::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20190104175112.php.html#13"><abbr title="DoctrineMigrations\Version20190104175112::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20190104175112.php.html#24"><abbr title="DoctrineMigrations\Version20190104175112::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ClientRepository.php.html#22"><abbr title="App\Repository\ClientRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ClientRepository.php.html#31"><abbr title="App\Repository\ClientRepository::loadUserByUsername">loadUserByUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/ClientRepository.php.html#42"><abbr title="App\Repository\ClientRepository::save">save</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PhoneRepository.php.html#26"><abbr title="App\Repository\PhoneRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#26"><abbr title="App\Repository\UserRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218170816.php.html#13"><abbr title="DoctrineMigrations\Version20181218170816::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218165613.php.html#13"><abbr title="DoctrineMigrations\Version20181218165613::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateAdminCommand.php.html#86"><abbr title="App\Command\CreateAdminCommand::configure">configure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Client.php.html#264"><abbr title="App\Entity\Client::eraseCredentials">eraseCredentials</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateAdminCommand.php.html#105"><abbr title="App\Command\CreateAdminCommand::execute">execute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateClientCommand.php.html#66"><abbr title="App\Command\CreateClientCommand::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateClientCommand.php.html#86"><abbr title="App\Command\CreateClientCommand::configure">configure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateClientCommand.php.html#105"><abbr title="App\Command\CreateClientCommand::execute">execute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateUserCommand.php.html#53"><abbr title="App\Command\CreateUserCommand::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateUserCommand.php.html#69"><abbr title="App\Command\CreateUserCommand::configure">configure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Command/CreateUserCommand.php.html#87"><abbr title="App\Command\CreateUserCommand::execute">execute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Client.php.html#95"><abbr title="App\Entity\Client::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Client.php.html#217"><abbr title="App\Entity\Client::getUsers">getUsers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Client.php.html#226"><abbr title="App\Entity\Client::addUser">addUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Client.php.html#240"><abbr title="App\Entity\Client::removeUser">removeUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Client.php.html#256"><abbr title="App\Entity\Client::getSalt">getSalt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Phone.php.html#115"><abbr title="App\Entity\Phone::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218161605.php.html#21"><abbr title="DoctrineMigrations\Version20181218161605::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#98"><abbr title="App\Entity\User::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EventListener/UserListener.php.html#46"><abbr title="App\EventListener\UserListener::prePersist">prePersist</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Filter/UserFilter.php.html#32"><abbr title="App\Filter\UserFilter::addFilterConstraint">addFilterConstraint</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Filter/UserFilter.php.html#64"><abbr title="App\Filter\UserFilter::setAnnotationReader">setAnnotationReader</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#23"><abbr title="App\Kernel::getLogDir">getLogDir</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#38"><abbr title="App\Kernel::configureContainer">configureContainer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#50"><abbr title="App\Kernel::configureRoutes">configureRoutes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218092521.php.html#13"><abbr title="DoctrineMigrations\Version20181218092521::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218092521.php.html#24"><abbr title="DoctrineMigrations\Version20181218092521::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20181218161605.php.html#13"><abbr title="DoctrineMigrations\Version20181218161605::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#36"><abbr title="App\Repository\UserRepository::save">save</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="EventListener/UserFilterConfigurator.php.html#56"><abbr title="App\EventListener\UserFilterConfigurator::onKernelRequest">onKernelRequest</abbr></a></td><td class="text-right">33%</td></tr>
+       <tr><td><a href="EventListener/UserFilterConfigurator.php.html#70"><abbr title="App\EventListener\UserFilterConfigurator::getUser">getUser</abbr></a></td><td class="text-right">50%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Filter/UserFilter.php.html#32"><abbr title="App\Filter\UserFilter::addFilterConstraint">addFilterConstraint</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Entity/Client.php.html#240"><abbr title="App\Entity\Client::removeUser">removeUser</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Client.php.html#226"><abbr title="App\Entity\Client::addUser">addUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="EventListener/UserFilterConfigurator.php.html#70"><abbr title="App\EventListener\UserFilterConfigurator::getUser">getUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="EventListener/UserFilterConfigurator.php.html#56"><abbr title="App\EventListener\UserFilterConfigurator::onKernelRequest">onKernelRequest</abbr></a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 6.1.4</a> using <a href="https://secure.php.net/" target="_top">PHP 7.2.10</a> with <a href="https://xdebug.org/">Xdebug 2.6.1</a> and <a href="https://phpunit.de/">PHPUnit 7.5.0</a> at Sun Jan 20 12:04:33 UTC 2019.</small>
+    </p>
+   </footer>
+  </div>
+  <script src=".js/jquery.min.js" type="text/javascript"></script>
+  <script src=".js/d3.min.js" type="text/javascript"></script>
+  <script src=".js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([21,0,0,0,1,0,1,2,0,0,2,2], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([57,0,0,0,1,0,1,0,0,0,0,45], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,0,"<a href=\"Annotation\/UserAware.php.html#18\">App\\Annotation\\UserAware<\/a>"],[0,3,"<a href=\"Command\/CreateAdminCommand.php.html#23\">App\\Command\\CreateAdminCommand<\/a>"],[0,3,"<a href=\"Command\/CreateClientCommand.php.html#23\">App\\Command\\CreateClientCommand<\/a>"],[0,3,"<a href=\"Command\/CreateUserCommand.php.html#22\">App\\Command\\CreateUserCommand<\/a>"],[100,1,"<a href=\"Controller\/ApiController.php.html#20\">App\\Controller\\ApiController<\/a>"],[62.857142857142854,23,"<a href=\"Entity\/Client.php.html#25\">App\\Entity\\Client<\/a>"],[96,23,"<a href=\"Entity\/Phone.php.html#30\">App\\Entity\\Phone<\/a>"],[94.73684210526315,16,"<a href=\"Entity\/User.php.html#36\">App\\Entity\\User<\/a>"],[57.14285714285714,7,"<a href=\"EventListener\/UserFilterConfigurator.php.html#20\">App\\EventListener\\UserFilterConfigurator<\/a>"],[60,3,"<a href=\"EventListener\/UserListener.php.html#19\">App\\EventListener\\UserListener<\/a>"],[0,7,"<a href=\"Filter\/UserFilter.php.html#20\">App\\Filter\\UserFilter<\/a>"],[30,7,"<a href=\"Kernel.php.html#12\">App\\Kernel<\/a>"],[0,2,"<a href=\"Migrations\/Version20181218092521.php.html#11\">DoctrineMigrations\\Version20181218092521<\/a>"],[0,2,"<a href=\"Migrations\/Version20181218161605.php.html#11\">DoctrineMigrations\\Version20181218161605<\/a>"],[0,2,"<a href=\"Migrations\/Version20181218165613.php.html#11\">DoctrineMigrations\\Version20181218165613<\/a>"],[0,2,"<a href=\"Migrations\/Version20181218170816.php.html#11\">DoctrineMigrations\\Version20181218170816<\/a>"],[0,2,"<a href=\"Migrations\/Version20181218171432.php.html#11\">DoctrineMigrations\\Version20181218171432<\/a>"],[0,2,"<a href=\"Migrations\/Version20181219072924.php.html#11\">DoctrineMigrations\\Version20181219072924<\/a>"],[0,2,"<a href=\"Migrations\/Version20181219103438.php.html#11\">DoctrineMigrations\\Version20181219103438<\/a>"],[0,2,"<a href=\"Migrations\/Version20181219103859.php.html#11\">DoctrineMigrations\\Version20181219103859<\/a>"],[0,2,"<a href=\"Migrations\/Version20181219110232.php.html#11\">DoctrineMigrations\\Version20181219110232<\/a>"],[0,2,"<a href=\"Migrations\/Version20181219110751.php.html#11\">DoctrineMigrations\\Version20181219110751<\/a>"],[0,2,"<a href=\"Migrations\/Version20181221144706.php.html#11\">DoctrineMigrations\\Version20181221144706<\/a>"],[0,2,"<a href=\"Migrations\/Version20181222155901.php.html#11\">DoctrineMigrations\\Version20181222155901<\/a>"],[0,2,"<a href=\"Migrations\/Version20181222160026.php.html#11\">DoctrineMigrations\\Version20181222160026<\/a>"],[0,2,"<a href=\"Migrations\/Version20190104175112.php.html#11\">DoctrineMigrations\\Version20190104175112<\/a>"],[0,3,"<a href=\"Repository\/ClientRepository.php.html#20\">App\\Repository\\ClientRepository<\/a>"],[0,1,"<a href=\"Repository\/PhoneRepository.php.html#20\">App\\Repository\\PhoneRepository<\/a>"],[0,2,"<a href=\"Repository\/UserRepository.php.html#20\">App\\Repository\\UserRepository<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Command\/CreateAdminCommand.php.html#66\">App\\Command\\CreateAdminCommand::__construct<\/a>"],[0,1,"<a href=\"Command\/CreateAdminCommand.php.html#86\">App\\Command\\CreateAdminCommand::configure<\/a>"],[0,1,"<a href=\"Command\/CreateAdminCommand.php.html#105\">App\\Command\\CreateAdminCommand::execute<\/a>"],[0,1,"<a href=\"Command\/CreateClientCommand.php.html#66\">App\\Command\\CreateClientCommand::__construct<\/a>"],[0,1,"<a href=\"Command\/CreateClientCommand.php.html#86\">App\\Command\\CreateClientCommand::configure<\/a>"],[0,1,"<a href=\"Command\/CreateClientCommand.php.html#105\">App\\Command\\CreateClientCommand::execute<\/a>"],[0,1,"<a href=\"Command\/CreateUserCommand.php.html#53\">App\\Command\\CreateUserCommand::__construct<\/a>"],[0,1,"<a href=\"Command\/CreateUserCommand.php.html#69\">App\\Command\\CreateUserCommand::configure<\/a>"],[0,1,"<a href=\"Command\/CreateUserCommand.php.html#87\">App\\Command\\CreateUserCommand::execute<\/a>"],[100,1,"<a href=\"Controller\/ApiController.php.html#26\">App\\Controller\\ApiController::api<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#85\">App\\Entity\\Client::__construct<\/a>"],[0,1,"<a href=\"Entity\/Client.php.html#95\">App\\Entity\\Client::getId<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#103\">App\\Entity\\Client::getEmail<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#112\">App\\Entity\\Client::setEmail<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#122\">App\\Entity\\Client::getCreatedAt<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#131\">App\\Entity\\Client::setCreatedAt<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#141\">App\\Entity\\Client::getPassword<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#150\">App\\Entity\\Client::setPassword<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#160\">App\\Entity\\Client::getRoles<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#169\">App\\Entity\\Client::setRoles<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#179\">App\\Entity\\Client::getUsername<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#188\">App\\Entity\\Client::setUsername<\/a>"],[100,2,"<a href=\"Entity\/Client.php.html#198\">App\\Entity\\Client::getPhoneNumber<\/a>"],[100,1,"<a href=\"Entity\/Client.php.html#207\">App\\Entity\\Client::setPhoneNumber<\/a>"],[0,1,"<a href=\"Entity\/Client.php.html#217\">App\\Entity\\Client::getUsers<\/a>"],[0,2,"<a href=\"Entity\/Client.php.html#226\">App\\Entity\\Client::addUser<\/a>"],[0,3,"<a href=\"Entity\/Client.php.html#240\">App\\Entity\\Client::removeUser<\/a>"],[0,1,"<a href=\"Entity\/Client.php.html#256\">App\\Entity\\Client::getSalt<\/a>"],[0,1,"<a href=\"Entity\/Client.php.html#264\">App\\Entity\\Client::eraseCredentials<\/a>"],[100,1,"<a href=\"Entity\/Phone.php.html#106\">App\\Entity\\Phone::__construct<\/a>"],[0,1,"<a href=\"Entity\/Phone.php.html#115\">App\\Entity\\Phone::getId<\/a>"],[100,1,"<a href=\"Entity\/Phone.php.html#123\">App\\Entity\\Phone::getBrand<\/a>"],[100,1,"<a href=\"Entity\/Phone.php.html#132\">App\\Entity\\Phone::setBrand<\/a>"],[100,1,"<a href=\"Entity\/Phone.php.html#142\">App\\Entity\\Phone::getModel<\/a>"],[100,1,"<a href=\"Entity\/Phone.php.html#151\">App\\Entity\\Phone::setModel<\/a>"],[100,1,"<a href=\"Entity\/Phone.php.html#161\">App\\Entity\\Phone::getCreatedAt<\/a>"],[100,1,"<a href=\"Entity\/Phone.php.html#170\">App\\Entity\\Phone::setCreatedAt<\/a>"],[100,2,"<a href=\"Entity\/Phone.php.html#180\">App\\Entity\\Phone::getUpdatedAt<\/a>"],[100,2,"<a href=\"Entity\/Phone.php.html#189\">App\\Entity\\Phone::setUpdatedAt<\/a>"],[100,2,"<a href=\"Entity\/Phone.php.html#199\">App\\Entity\\Phone::getColor<\/a>"],[100,2,"<a href=\"Entity\/Phone.php.html#208\">App\\Entity\\Phone::setColor<\/a>"],[100,2,"<a href=\"Entity\/Phone.php.html#218\">App\\Entity\\Phone::getPrice<\/a>"],[100,2,"<a href=\"Entity\/Phone.php.html#227\">App\\Entity\\Phone::setPrice<\/a>"],[100,2,"<a href=\"Entity\/Phone.php.html#237\">App\\Entity\\Phone::getStorage<\/a>"],[100,1,"<a href=\"Entity\/Phone.php.html#245\">App\\Entity\\Phone::setStorage<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#89\">App\\Entity\\User::__construct<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#98\">App\\Entity\\User::getId<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#106\">App\\Entity\\User::getName<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#115\">App\\Entity\\User::setName<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#125\">App\\Entity\\User::getEmail<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#134\">App\\Entity\\User::setEmail<\/a>"],[100,2,"<a href=\"Entity\/User.php.html#144\">App\\Entity\\User::getPhoneNumber<\/a>"],[100,2,"<a href=\"Entity\/User.php.html#153\">App\\Entity\\User::setPhoneNumber<\/a>"],[100,2,"<a href=\"Entity\/User.php.html#166\">App\\Entity\\User::setClient<\/a>"],[100,2,"<a href=\"Entity\/User.php.html#176\">App\\Entity\\User::getClient<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#184\">App\\Entity\\User::getCreatedAt<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#192\">App\\Entity\\User::setCreatedAt<\/a>"],[100,1,"<a href=\"EventListener\/UserFilterConfigurator.php.html#43\">App\\EventListener\\UserFilterConfigurator::__construct<\/a>"],[33.33333333333333,2,"<a href=\"EventListener\/UserFilterConfigurator.php.html#56\">App\\EventListener\\UserFilterConfigurator::onKernelRequest<\/a>"],[50,4,"<a href=\"EventListener\/UserFilterConfigurator.php.html#70\">App\\EventListener\\UserFilterConfigurator::getUser<\/a>"],[100,1,"<a href=\"EventListener\/UserListener.php.html#30\">App\\EventListener\\UserListener::__construct<\/a>"],[100,1,"<a href=\"EventListener\/UserListener.php.html#38\">App\\EventListener\\UserListener::OnKernelRequest<\/a>"],[0,1,"<a href=\"EventListener\/UserListener.php.html#46\">App\\EventListener\\UserListener::prePersist<\/a>"],[0,6,"<a href=\"Filter\/UserFilter.php.html#32\">App\\Filter\\UserFilter::addFilterConstraint<\/a>"],[0,1,"<a href=\"Filter\/UserFilter.php.html#64\">App\\Filter\\UserFilter::setAnnotationReader<\/a>"],[100,1,"<a href=\"Kernel.php.html#18\">App\\Kernel::getCacheDir<\/a>"],[0,1,"<a href=\"Kernel.php.html#23\">App\\Kernel::getLogDir<\/a>"],[100,3,"<a href=\"Kernel.php.html#28\">App\\Kernel::registerBundles<\/a>"],[0,1,"<a href=\"Kernel.php.html#38\">App\\Kernel::configureContainer<\/a>"],[0,1,"<a href=\"Kernel.php.html#50\">App\\Kernel::configureRoutes<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218092521.php.html#13\">DoctrineMigrations\\Version20181218092521::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218092521.php.html#24\">DoctrineMigrations\\Version20181218092521::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218161605.php.html#13\">DoctrineMigrations\\Version20181218161605::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218161605.php.html#21\">DoctrineMigrations\\Version20181218161605::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218165613.php.html#13\">DoctrineMigrations\\Version20181218165613::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218165613.php.html#21\">DoctrineMigrations\\Version20181218165613::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218170816.php.html#13\">DoctrineMigrations\\Version20181218170816::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218170816.php.html#21\">DoctrineMigrations\\Version20181218170816::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218171432.php.html#13\">DoctrineMigrations\\Version20181218171432::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181218171432.php.html#22\">DoctrineMigrations\\Version20181218171432::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219072924.php.html#13\">DoctrineMigrations\\Version20181219072924::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219072924.php.html#24\">DoctrineMigrations\\Version20181219072924::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219103438.php.html#13\">DoctrineMigrations\\Version20181219103438::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219103438.php.html#21\">DoctrineMigrations\\Version20181219103438::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219103859.php.html#13\">DoctrineMigrations\\Version20181219103859::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219103859.php.html#21\">DoctrineMigrations\\Version20181219103859::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219110232.php.html#13\">DoctrineMigrations\\Version20181219110232::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219110232.php.html#21\">DoctrineMigrations\\Version20181219110232::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219110751.php.html#13\">DoctrineMigrations\\Version20181219110751::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181219110751.php.html#22\">DoctrineMigrations\\Version20181219110751::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181221144706.php.html#13\">DoctrineMigrations\\Version20181221144706::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181221144706.php.html#21\">DoctrineMigrations\\Version20181221144706::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181222155901.php.html#13\">DoctrineMigrations\\Version20181222155901::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181222155901.php.html#25\">DoctrineMigrations\\Version20181222155901::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20181222160026.php.html#13\">DoctrineMigrations\\Version20181222160026::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20181222160026.php.html#25\">DoctrineMigrations\\Version20181222160026::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20190104175112.php.html#13\">DoctrineMigrations\\Version20190104175112::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20190104175112.php.html#24\">DoctrineMigrations\\Version20190104175112::down<\/a>"],[0,1,"<a href=\"Repository\/ClientRepository.php.html#22\">App\\Repository\\ClientRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/ClientRepository.php.html#31\">App\\Repository\\ClientRepository::loadUserByUsername<\/a>"],[0,1,"<a href=\"Repository\/ClientRepository.php.html#42\">App\\Repository\\ClientRepository::save<\/a>"],[0,1,"<a href=\"Repository\/PhoneRepository.php.html#26\">App\\Repository\\PhoneRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#26\">App\\Repository\\UserRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#36\">App\\Repository\\UserRepository::save<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
