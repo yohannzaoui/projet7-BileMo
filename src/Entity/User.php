@@ -17,6 +17,7 @@ use App\Annotation\UserAware;
  * @ORM\EntityListeners({"App\EventListener\UserListener"})
  *
  * @ApiResource(
+ *     attributes={"order"={"createdAt":"ASC"}},
  *     normalizationContext={"groups"={"read"}},
  *     denormalizationContext={"groups"={"write"}},
  *     attributes={"access_control"="is_granted('ROLE_USER')"},
@@ -31,11 +32,12 @@ use App\Annotation\UserAware;
  * @ORM\Entity(
  *     repositoryClass="App\Repository\UserRepository"
  *     )
+ *
  */
 class User
 {
     /**
-     * @var string The id of this phone
+     * @var string The id of this user
      *
      * @ORM\Id()
      * @ORM\Column(type="guid")
@@ -46,6 +48,8 @@ class User
     private $id;
 
     /**
+     * @var string The name of this user
+     *
      * @ORM\Column(type="string", length=255, nullable=false)
      * @Assert\NotBlank()
      * @Groups({"read","write"})
@@ -53,6 +57,8 @@ class User
     private $name;
 
     /**
+     * @var string The email of this user
+     *
      * @ORM\Column(type="string", length=255, unique=true)
      * @Assert\NotBlank(message="This value should not be blank")
      * @Assert\Email(message="Email address not valid")
@@ -61,6 +67,8 @@ class User
     private $email;
 
     /**
+     * @var integer The phone number of this user
+     *
      * @ORM\Column(type="integer", length=10, nullable=true)
      * @Assert\Type("numeric")
      * @Groups({"read","write"})
@@ -68,6 +76,8 @@ class User
     private $phoneNumber;
 
     /**
+     * @var string The created date of this user
+     *
      * @ORM\Column(type="datetime")
      * @Groups({"read","write"})
      */
@@ -167,6 +177,14 @@ class User
         $this->client = $client;
 
         return $this;
+    }
+
+    /**
+     * @return Client|null
+     */
+    public function getClient(): ? Client
+    {
+        return $this->client;
     }
 
     /**

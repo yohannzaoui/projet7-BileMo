@@ -16,9 +16,11 @@ use Doctrine\ORM\Mapping as ORM;
  *     collectionOperations={},
  *     itemOperations={}
  *     )
+ *
  * @ORM\Entity(
  *     repositoryClass="App\Repository\ClientRepository"
  * )
+ *
  */
 class Client implements UserInterface
 {

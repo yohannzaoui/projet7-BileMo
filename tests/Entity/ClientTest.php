@@ -10,7 +10,6 @@ namespace App\Tests\Entity;
 
 
 use App\Entity\Client;
-use App\Entity\User;
 use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
