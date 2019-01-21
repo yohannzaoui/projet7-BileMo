@@ -56,7 +56,7 @@ class UserFilterConfigurator
     public function onKernelRequest()
     {
         if (!$user = $this->getUser()) {
-            return;
+            return ;
         }
 
         $filter = $this->em->getFilters()->enable('user_filter');

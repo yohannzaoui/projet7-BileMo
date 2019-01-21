@@ -21,7 +21,8 @@ use App\Annotation\UserAware;
  *     normalizationContext={"groups"={"read"}},
  *     denormalizationContext={"groups"={"write"}},
  *     attributes={"access_control"="is_granted('ROLE_USER')"},
- *     itemOperations={"get","delete"},
+ *     itemOperations={"get"={"access_control"="is_granted('ROLE_USER') and object.client == user"},
+ *     "delete"={"access_control"="is_granted('ROLE_USER') and object.client == user"}},
  *     collectionOperations={"get","post"}
  * )
  *
@@ -89,7 +90,7 @@ class User
      * @ORM\JoinColumn(name="client_id", referencedColumnName="id")
      *
      */
-    private $client;
+    public $client;
 
     /**
      * User constructor.
